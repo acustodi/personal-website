@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Industrial Design Portfolio</title>
+<meta name="description" content="Industrial design portfolio featuring product design, graphic design, marketing, and miscellaneous projects.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="index.html" aria-label="Home">
+      <!-- EDIT: swap "YN" for your own initials -->
+      <span class="logo-mark">YN</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="resume.html">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero registration">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Industrial Design Portfolio</span>
+    <!-- EDIT: your name -->
+    <h1>Your Name</h1>
+    <!-- EDIT: a one-line statement about what you design and how you think -->
+    <p class="tagline">Industrial designer working across product, graphic, and marketing design — turning early sketches into things people can hold, use, and trust.</p>
+    <hr class="hero-rule">
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Selected Work</h2>
+      <div class="filters" role="group" aria-label="Filter projects by category">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="product">Product Design</button>
+        <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+        <button class="filter-btn" data-filter="marketing">Marketing</button>
+        <button class="filter-btn" data-filter="misc">Misc</button>
+      </div>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- PROJECT CARD — duplicate this <a> block for each project.
+           Update data-category, the placeholder text, and href once you
+           make a copy of project.html for this project. -->
+      <a class="project-card" href="project.html" data-category="product">
+        <div class="media-placeholder"><span>Project Image</span></div>
+        <div class="titleblock">
+          <h3>Ergo — Adjustable Task Chair</h3>
+          <p class="view-link">View project</p>
+          <div class="titleblock-meta">
+            <span class="cat">Product Design</span>
+            <span>2025</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card" href="project.html" data-category="product">
+        <div class="media-placeholder"><span>Project Image</span></div>
+        <div class="titleblock">
+          <h3>Airflow — Portable Fan Concept</h3>
+          <p class="view-link">View project</p>
+          <div class="titleblock-meta">
+            <span class="cat">Product Design</span>
+            <span>2024</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card" href="project.html" data-category="graphic">
+        <div class="media-placeholder"><span>Project Image</span></div>
+        <div class="titleblock">
+          <h3>Terra — Brand Identity System</h3>
+          <p class="view-link">View project</p>
+          <div class="titleblock-meta">
+            <span class="cat">Graphic Design</span>
+            <span>2024</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card" href="project.html" data-category="graphic">
+        <div class="media-placeholder"><span>Project Image</span></div>
+        <div class="titleblock">
+          <h3>Exhibition Poster Series</h3>
+          <p class="view-link">View project</p>
+          <div class="titleblock-meta">
+            <span class="cat">Graphic Design</span>
+            <span>2023</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card" href="project.html" data-category="marketing">
+        <div class="media-placeholder"><span>Project Image</span></div>
+        <div class="titleblock">
+          <h3>Product Launch Campaign</h3>
+          <p class="view-link">View project</p>
+          <div class="titleblock-meta">
+            <span class="cat">Marketing</span>
+            <span>2024</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card" href="project.html" data-category="marketing">
+        <div class="media-placeholder"><span>Project Image</span></div>
+        <div class="titleblock">
+          <h3>Social Content System</h3>
+          <p class="view-link">View project</p>
+          <div class="titleblock-meta">
+            <span class="cat">Marketing</span>
+            <span>2023</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card" href="project.html" data-category="misc">
+        <div class="media-placeholder"><span>Project Image</span></div>
+        <div class="titleblock">
+          <h3>Furniture Joinery Study</h3>
+          <p class="view-link">View project</p>
+          <div class="titleblock-meta">
+            <span class="cat">Misc</span>
+            <span>2023</span>
+          </div>
+        </div>
+      </a>
+
+      <a class="project-card" href="project.html" data-category="misc">
+        <div class="media-placeholder"><span>Project Image</span></div>
+        <div class="titleblock">
+          <h3>Generative Pattern Experiments</h3>
+          <p class="view-link">View project</p>
+          <div class="titleblock-meta">
+            <span class="cat">Misc</span>
+            <span>2022</span>
+          </div>
+        </div>
+      </a>
+      <!-- END PROJECT CARD -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap about-grid">
+    <!-- EDIT: replace initials or swap this div for an <img> of your portrait -->
+    <div class="about-portrait">YN</div>
+    <div class="about-bio">
+      <span class="eyebrow">About</span>
+      <h2 style="margin-top:0.8rem;">A short introduction</h2>
+      <!-- EDIT: 2–3 sentences on your background, degree, and design approach -->
+      <p style="margin-top:1.2rem;">I'm a recent industrial design graduate interested in how objects get made — from early concept sketches through CAD, prototyping, and the small material decisions that decide how something feels in the hand. I like projects that mix physical product work with the graphic and marketing thinking that gets it in front of people.</p>
+      <p>Based in [Your City]. Open to product design, graphic design, and design-adjacent roles.</p>
+      <div class="skill-tags">
+        <span class="tag">CAD — SolidWorks / Fusion 360</span>
+        <span class="tag">Sketching &amp; Ideation</span>
+        <span class="tag">Rapid Prototyping</span>
+        <span class="tag">Adobe Creative Suite</span>
+        <span class="tag">Brand &amp; Visual Identity</span>
+        <span class="tag">User Research</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / FOOTER ============ -->
+<footer class="site-footer registration" id="contact">
+  <div class="wrap footer-inner">
+    <div class="footer-top">
+      <h2>Let's talk about a project, or just say hello.</h2>
+      <div class="contact-list">
+        <!-- EDIT: real contact links -->
+        <a href="mailto:your.email@example.com">your.email@example.com</a>
+        <a href="resume.html">Resume →</a>
+        <a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span class="auto-year">2026</span> Your Name</span>
+      <span>Built &amp; hosted on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
