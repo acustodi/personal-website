@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Résumé — Your Name</title>
+<meta name="description" content="Résumé of Your Name, industrial designer.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="index.html" aria-label="Home">
+      <span class="logo-mark">YN</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html#work">Work</a>
+      <a href="resume.html" class="is-active">Resume</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="sheet-header">
+    <div>
+      <span class="eyebrow">Résumé</span>
+      <!-- EDIT: your name -->
+      <h1>Your Name</h1>
+      <div class="contact-row">
+        <span>your.email@example.com</span>
+        <span>/</span>
+        <span>[Your City]</span>
+        <span>/</span>
+        <span>linkedin.com/in/yourname</span>
+      </div>
+      <div class="sheet-actions">
+        <!-- EDIT: add a resume.pdf into /assets and point this link at it -->
+        <a class="btn btn-primary" href="assets/resume.pdf" download>Download PDF</a>
+        <button class="btn" onclick="window.print()">Print</button>
+      </div>
+    </div>
+    <div class="titleblock-mini">
+      <div class="row"><span class="field-label">Sheet</span><span>Résumé</span></div>
+      <div class="row"><span class="field-label">Rev.</span><span class="auto-year">2026</span></div>
+      <div class="row"><span class="field-label">Focus</span><span>Industrial Design</span></div>
+    </div>
+  </div>
+
+  <!-- ============ EDUCATION ============ -->
+  <div class="resume-section">
+    <div class="resume-section-head">
+      <span class="field-label">Education</span>
+      <div>
+        <div class="entry">
+          <div class="entry-head">
+            <!-- EDIT: your degree and school -->
+            <h3>B.F.A. / B.S. Industrial Design</h3>
+            <span class="entry-meta">University Name — 2022 – 2026</span>
+          </div>
+          <p style="color:var(--ink-soft);">Relevant coursework: product design studio, materials &amp; manufacturing processes, CAD modeling, design research, visual communication.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <div class="resume-section">
+    <div class="resume-section-head">
+      <span class="field-label">Experience</span>
+      <div>
+        <!-- EDIT: duplicate this .entry block for each role -->
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Design Intern — Company Name</h3>
+            <span class="entry-meta">Summer 2025</span>
+          </div>
+          <ul>
+            <li>Supported a product design team from concept sketching through CMF (color, material, finish) decisions.</li>
+            <li>Built and tested physical prototypes across two development rounds.</li>
+            <li>Prepared client-facing decks summarizing design direction and rationale.</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>Freelance Graphic &amp; Marketing Design</h3>
+            <span class="entry-meta">2023 – Present</span>
+          </div>
+          <ul>
+            <li>Designed brand identities and marketing collateral for small businesses and student organizations.</li>
+            <li>Managed projects end-to-end: client brief, concept, revisions, final delivery.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SKILLS ============ -->
+  <div class="resume-section">
+    <div class="resume-section-head">
+      <span class="field-label">Skills</span>
+      <div class="skills-columns">
+        <div>
+          <h4>Design</h4>
+          <ul>
+            <li>Sketching &amp; ideation</li>
+            <li>3D CAD modeling</li>
+            <li>Rapid prototyping</li>
+            <li>User &amp; design research</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Software</h4>
+          <ul>
+            <li>SolidWorks / Fusion 360</li>
+            <li>Adobe Illustrator, Photoshop, InDesign</li>
+            <li>Figma</li>
+            <li>Keyshot</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Fabrication</h4>
+          <ul>
+            <li>3D printing (FDM / SLA)</li>
+            <li>Laser cutting</li>
+            <li>Wood &amp; foam shop tools</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ AWARDS / EXHIBITIONS ============ -->
+  <div class="resume-section">
+    <div class="resume-section-head">
+      <span class="field-label">Awards &amp; Exhibitions</span>
+      <div>
+        <div class="entry">
+          <div class="entry-head">
+            <!-- EDIT: swap in real awards, exhibitions, or competitions — delete this section if not applicable -->
+            <h3>Student Design Showcase — Selected Work</h3>
+            <span class="entry-meta">2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-footer registration" style="margin-top:2rem;">
+  <div class="wrap footer-inner">
+    <div class="footer-bottom">
+      <span>© <span class="auto-year">2026</span> Your Name</span>
+      <span>Built &amp; hosted on GitHub Pages</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
