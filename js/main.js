@@ -18,9 +18,9 @@ if (navToggle && siteNav) {
   });
 }
 
-// ---------- Work grid filtering ----------
+// ---------- Work filtering (by discipline section) ----------
 const filterButtons = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
+const workSections = document.querySelectorAll('.work-section');
 
 filterButtons.forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -28,9 +28,9 @@ filterButtons.forEach((btn) => {
     btn.classList.add('active');
 
     const filter = btn.dataset.filter;
-    projectCards.forEach((card) => {
-      const match = filter === 'all' || card.dataset.category === filter;
-      card.style.display = match ? '' : 'none';
+    workSections.forEach((section) => {
+      const match = filter === 'all' || section.dataset.category === filter;
+      section.style.display = match ? '' : 'none';
     });
   });
 });

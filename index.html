@@ -20,8 +20,11 @@
       <span class="logo-mark">YN</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="#work">Work</a>
-      <a href="resume.html">Resume</a>
+      <a href="#product">01 Product</a>
+      <a href="#graphic">02 Graphic</a>
+      <a href="#marketing">03 Marketing</a>
+      <a href="#misc">04 Misc</a>
+      <a href="resume.html">About / Resume ↗</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -33,11 +36,14 @@
 <!-- ============ HERO ============ -->
 <section class="hero registration">
   <div class="wrap hero-inner">
-    <span class="eyebrow">Industrial Design Portfolio</span>
+    <span class="eyebrow">Portfolio — <span class="auto-year">2026</span></span>
     <!-- EDIT: your name -->
     <h1>Your Name</h1>
     <!-- EDIT: a one-line statement about what you design and how you think -->
-    <p class="tagline">Industrial designer working across product, graphic, and marketing design — turning early sketches into things people can hold, use, and trust.</p>
+    <p class="tagline">Industrial designer with a multidisciplinary creative background — spanning product, graphic, and marketing design.</p>
+    <!-- These two numbers drive from the sections below: keep them in sync
+         if you add or remove disciplines / projects. -->
+    <p class="hero-stats">4 Disciplines · 13 Projects · Updated <span class="auto-year">2026</span></p>
     <hr class="hero-rule">
   </div>
 </section>
@@ -47,118 +53,219 @@
   <div class="wrap">
     <div class="section-head">
       <h2>Selected Work</h2>
-      <div class="filters" role="group" aria-label="Filter projects by category">
+      <div class="filters" role="group" aria-label="Filter by discipline">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="product">Product Design</button>
-        <button class="filter-btn" data-filter="graphic">Graphic Design</button>
-        <button class="filter-btn" data-filter="marketing">Marketing</button>
-        <button class="filter-btn" data-filter="misc">Misc</button>
+        <button class="filter-btn" data-filter="product">01 Product</button>
+        <button class="filter-btn" data-filter="graphic">02 Graphic</button>
+        <button class="filter-btn" data-filter="marketing">03 Marketing</button>
+        <button class="filter-btn" data-filter="misc">04 Misc</button>
       </div>
     </div>
 
-    <div class="project-grid">
+    <!-- ============ 01 PRODUCT DESIGN ============ -->
+    <div class="work-section" id="product" data-category="product">
+      <div class="section-label">
+        <span class="num">01</span>
+        <h3>Product Design</h3>
+      </div>
+      <div class="project-grid">
 
-      <!-- PROJECT CARD — duplicate this <a> block for each project.
-           Update data-category, the placeholder text, and href once you
-           make a copy of project.html for this project. -->
-      <a class="project-card" href="project.html" data-category="product">
-        <div class="media-placeholder"><span>Project Image</span></div>
-        <div class="titleblock">
-          <h3>Ergo — Adjustable Task Chair</h3>
-          <p class="view-link">View project</p>
-          <div class="titleblock-meta">
-            <span class="cat">Product Design</span>
-            <span>2025</span>
+        <!-- PROJECT CARD — duplicate this <a> block for each project.
+             Update the placeholder text and href once you make a copy
+             of project.html for this project. -->
+        <a class="project-card" href="project.html">
+          <div class="media-placeholder"><span>Project Image</span></div>
+          <div class="titleblock">
+            <h3>Ergonomic Task Chair</h3>
+            <p class="view-link">View project</p>
+            <div class="titleblock-meta">
+              <span class="cat">Product Design</span>
+              <span>2025</span>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
 
-      <a class="project-card" href="project.html" data-category="product">
-        <div class="media-placeholder"><span>Project Image</span></div>
-        <div class="titleblock">
-          <h3>Airflow — Portable Fan Concept</h3>
-          <p class="view-link">View project</p>
-          <div class="titleblock-meta">
-            <span class="cat">Product Design</span>
-            <span>2024</span>
+        <a class="project-card" href="project.html">
+          <div class="media-placeholder"><span>Project Image</span></div>
+          <div class="titleblock">
+            <h3>Modular Charging Dock</h3>
+            <p class="view-link">View project</p>
+            <div class="titleblock-meta">
+              <span class="cat">Product Design</span>
+              <span>2024</span>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
 
-      <a class="project-card" href="project.html" data-category="graphic">
-        <div class="media-placeholder"><span>Project Image</span></div>
-        <div class="titleblock">
-          <h3>Terra — Brand Identity System</h3>
-          <p class="view-link">View project</p>
-          <div class="titleblock-meta">
-            <span class="cat">Graphic Design</span>
-            <span>2024</span>
+        <a class="project-card" href="project.html">
+          <div class="media-placeholder"><span>Project Image</span></div>
+          <div class="titleblock">
+            <h3>Stackable Storage System</h3>
+            <p class="view-link">View project</p>
+            <div class="titleblock-meta">
+              <span class="cat">Product Design</span>
+              <span>2024</span>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
 
-      <a class="project-card" href="project.html" data-category="graphic">
-        <div class="media-placeholder"><span>Project Image</span></div>
-        <div class="titleblock">
-          <h3>Exhibition Poster Series</h3>
-          <p class="view-link">View project</p>
-          <div class="titleblock-meta">
-            <span class="cat">Graphic Design</span>
-            <span>2023</span>
+        <a class="project-card" href="project.html">
+          <div class="media-placeholder"><span>Project Image</span></div>
+          <div class="titleblock">
+            <h3>Cordless Kettle Concept</h3>
+            <p class="view-link">View project</p>
+            <div class="titleblock-meta">
+              <span class="cat">Product Design</span>
+              <span>2023</span>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
 
-      <a class="project-card" href="project.html" data-category="marketing">
-        <div class="media-placeholder"><span>Project Image</span></div>
-        <div class="titleblock">
-          <h3>Product Launch Campaign</h3>
-          <p class="view-link">View project</p>
-          <div class="titleblock-meta">
-            <span class="cat">Marketing</span>
-            <span>2024</span>
+        <a class="project-card" href="project.html">
+          <div class="media-placeholder"><span>Project Image</span></div>
+          <div class="titleblock">
+            <h3>Adjustable Desk Riser</h3>
+            <p class="view-link">View project</p>
+            <div class="titleblock-meta">
+              <span class="cat">Product Design</span>
+              <span>2023</span>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+        <!-- END PROJECT CARD -->
 
-      <a class="project-card" href="project.html" data-category="marketing">
-        <div class="media-placeholder"><span>Project Image</span></div>
-        <div class="titleblock">
-          <h3>Social Content System</h3>
-          <p class="view-link">View project</p>
-          <div class="titleblock-meta">
-            <span class="cat">Marketing</span>
-            <span>2023</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="project-card" href="project.html" data-category="misc">
-        <div class="media-placeholder"><span>Project Image</span></div>
-        <div class="titleblock">
-          <h3>Furniture Joinery Study</h3>
-          <p class="view-link">View project</p>
-          <div class="titleblock-meta">
-            <span class="cat">Misc</span>
-            <span>2023</span>
-          </div>
-        </div>
-      </a>
-
-      <a class="project-card" href="project.html" data-category="misc">
-        <div class="media-placeholder"><span>Project Image</span></div>
-        <div class="titleblock">
-          <h3>Generative Pattern Experiments</h3>
-          <p class="view-link">View project</p>
-          <div class="titleblock-meta">
-            <span class="cat">Misc</span>
-            <span>2022</span>
-          </div>
-        </div>
-      </a>
-      <!-- END PROJECT CARD -->
-
+      </div>
     </div>
+
+    <!-- ============ 02 GRAPHIC DESIGN ============ -->
+    <div class="work-section" id="graphic" data-category="graphic">
+      <div class="section-label">
+        <span class="num">02</span>
+        <h3>Graphic Design</h3>
+      </div>
+      <div class="project-grid">
+
+        <a class="project-card" href="project.html">
+          <div class="media-placeholder"><span>Project Image</span></div>
+          <div class="titleblock">
+            <h3>Festival Identity System</h3>
+            <p class="view-link">View project</p>
+            <div class="titleblock-meta">
+              <span class="cat">Graphic Design</span>
+              <span>2025</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" href="project.html">
+          <div class="media-placeholder"><span>Project Image</span></div>
+          <div class="titleblock">
+            <h3>Type Specimen Series</h3>
+            <p class="view-link">View project</p>
+            <div class="titleblock-meta">
+              <span class="cat">Graphic Design</span>
+              <span>2023</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" href="project.html">
+          <div class="media-placeholder"><span>Project Image</span></div>
+          <div class="titleblock">
+            <h3>Exhibition Signage Set</h3>
+            <p class="view-link">View project</p>
+            <div class="titleblock-meta">
+              <span class="cat">Graphic Design</span>
+              <span>2024</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" href="project.html">
+          <div class="media-placeholder"><span>Project Image</span></div>
+          <div class="titleblock">
+            <h3>Packaging Redesign</h3>
+            <p class="view-link">View project</p>
+            <div class="titleblock-meta">
+              <span class="cat">Graphic Design</span>
+              <span>2025</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ============ 03 MARKETING ============ -->
+    <div class="work-section" id="marketing" data-category="marketing">
+      <div class="section-label">
+        <span class="num">03</span>
+        <h3>Marketing</h3>
+      </div>
+      <div class="project-grid">
+
+        <a class="project-card" href="project.html">
+          <div class="media-placeholder"><span>Project Image</span></div>
+          <div class="titleblock">
+            <h3>Product Launch Campaign</h3>
+            <p class="view-link">View project</p>
+            <div class="titleblock-meta">
+              <span class="cat">Marketing</span>
+              <span>2024</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" href="project.html">
+          <div class="media-placeholder"><span>Project Image</span></div>
+          <div class="titleblock">
+            <h3>Social Content Series</h3>
+            <p class="view-link">View project</p>
+            <div class="titleblock-meta">
+              <span class="cat">Marketing</span>
+              <span>2025</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ============ 04 MISCELLANEOUS ============ -->
+    <div class="work-section" id="misc" data-category="misc">
+      <div class="section-label">
+        <span class="num">04</span>
+        <h3>Miscellaneous</h3>
+      </div>
+      <div class="project-grid">
+
+        <a class="project-card" href="project.html">
+          <div class="media-placeholder"><span>Project Image</span></div>
+          <div class="titleblock">
+            <h3>Furniture Prototype</h3>
+            <p class="view-link">View project</p>
+            <div class="titleblock-meta">
+              <span class="cat">Miscellaneous</span>
+              <span>2023</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" href="project.html">
+          <div class="media-placeholder"><span>Project Image</span></div>
+          <div class="titleblock">
+            <h3>Generative Poster Study</h3>
+            <p class="view-link">View project</p>
+            <div class="titleblock-meta">
+              <span class="cat">Miscellaneous</span>
+              <span>2024</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -193,7 +300,7 @@
       <div class="contact-list">
         <!-- EDIT: real contact links -->
         <a href="mailto:your.email@example.com">your.email@example.com</a>
-        <a href="resume.html">Resume →</a>
+        <a href="resume.html">About / Resume →</a>
         <a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
       </div>
