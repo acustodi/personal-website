@@ -1,27 +1,36 @@
 /* =========================================================
    PORTFOLIO STYLESHEET
-   Design language: technical drawing / drafting sheet.
-   Borrows title blocks, hairline rules, registration marks,
-   and section-hatching from industrial design documentation.
+   Design language: numbered discipline sections, cool near-
+   white ground, single accent, Work Sans + IBM Plex Mono.
    ========================================================= */
 
 :root {
-  --bg: #FAFAF8;
-  --bg-panel: #F1EFE9;
-  --ink: #1C1C1A;
-  --ink-soft: #6B6A61;
-  --ink-faint: #9B9A8F;
-  --line: #DAD8CE;
-  --line-strong: #B9B6A9;
-  --accent: #2B5D8C;
-  --accent-soft: #E7EEF3;
+  --bg: oklch(98% 0.005 240);
+  --bg-panel: oklch(96% 0.005 240);
+  --ink: oklch(20% 0.01 240);
+  --ink-2: oklch(35% 0.01 240);
+  --ink-soft: oklch(45% 0.01 240);
+  --ink-faint: oklch(50% 0.01 240);
+  --line: oklch(88% 0.01 240);
+  --line-2: oklch(85% 0.01 240);
+  --line-strong: oklch(80% 0.01 240);
+  --accent: oklch(55% 0.15 200);
+  --accent-hover: oklch(38% 0.16 200);
+  --accent-soft: oklch(95% 0.03 200);
+  --stripe-a: oklch(94% 0.01 240);
+  --stripe-b: oklch(91% 0.01 240);
+  --logo-stripe-a: oklch(90% 0.01 240);
+  --logo-stripe-b: oklch(94% 0.01 240);
 
-  --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Work Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Work Sans", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
 
   --maxw: 1180px;
-  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --gutter: 40px;
+}
+@media (max-width: 640px) {
+  :root { --gutter: 20px; }
 }
 
 /* -------------------- Reset -------------------- */
@@ -113,29 +122,43 @@ button { font: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
+  height: 64px;
 }
 .logo-mark {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line-strong);
+  background-image: repeating-linear-gradient(45deg, var(--logo-stripe-a) 0 5px, var(--logo-stripe-b) 5px 10px);
   font-family: var(--font-mono);
-  font-size: 0.85rem;
-  border: 1px solid var(--ink);
-  padding: 0.35em 0.6em;
+  font-size: 8px;
   letter-spacing: 0.05em;
+  color: var(--ink-soft);
 }
 .site-nav {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 .site-nav a {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   color: var(--ink-soft);
   padding-bottom: 2px;
   white-space: nowrap;
   border-bottom: 1px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
+}
+.site-nav a.nav-cta {
+  color: var(--accent);
+}
+.site-nav a.nav-cta:hover,
+.site-nav a.nav-cta:focus-visible {
+  color: var(--accent-hover);
 }
 .site-nav a:hover,
 .site-nav a:focus-visible,
@@ -160,22 +183,23 @@ button { font: inherit; cursor: pointer; }
   background: var(--ink);
 }
 
-@media (max-width: 920px) {
+@media (max-width: 860px) {
   .nav-toggle { display: flex; }
   .site-nav {
     position: absolute;
-    top: 68px;
+    top: 64px;
     left: 0;
     right: 0;
     background: var(--bg);
     border-bottom: 1px solid var(--line);
     flex-direction: column;
+    align-items: stretch;
     gap: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease;
   }
-  .site-nav.open { max-height: 420px; }
+  .site-nav.open { max-height: 360px; }
   .site-nav a {
     padding: 1rem var(--gutter);
     border-bottom: 1px solid var(--line);
@@ -184,95 +208,104 @@ button { font: inherit; cursor: pointer; }
 
 /* -------------------- Hero -------------------- */
 .hero {
-  position: relative;
-  padding: 5.5rem 0 4rem;
-  overflow: hidden;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 96px var(--gutter) 120px;
 }
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 42px 42px;
-  background-position: center top;
-  -webkit-mask-image: linear-gradient(to bottom, black 45%, transparent 95%);
-  mask-image: linear-gradient(to bottom, black 45%, transparent 95%);
-  pointer-events: none;
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
 }
-.hero-inner {
-  position: relative;
-  z-index: 1;
+.kicker .rule {
+  flex: 1;
+  max-width: 200px;
+  height: 1px;
+  background: var(--line-2);
+}
+.kicker .label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.hero-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  color: var(--ink-2);
+  margin-bottom: 12px;
 }
 .hero h1 {
-  font-size: clamp(2.6rem, 7vw, 5rem);
-  margin: 0.6em 0 0.3em;
-  line-height: 1.02;
-}
-.hero .tagline {
-  max-width: 42ch;
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
-  color: var(--ink-soft);
+  font-size: clamp(2.1rem, 5.5vw, 3.625rem);
+  line-height: 1.15;
+  max-width: 840px;
+  margin: 0 0 20px;
+  font-weight: 700;
 }
 .hero-stats {
-  margin-top: 1.4rem;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink-soft);
-}
-.hero-rule {
-  margin-top: 2.5rem;
-  border: none;
-  border-top: 1px solid var(--line-strong);
-  position: relative;
-}
-.hero-rule::before, .hero-rule::after {
-  content: "";
-  position: absolute;
-  top: -5px;
-  width: 1px;
-  height: 10px;
-  background: var(--line-strong);
-}
-.hero-rule::before { left: 0; }
-.hero-rule::after { right: 0; }
-
-/* -------------------- Section shell -------------------- */
-section { padding: 4.5rem 0; }
-.section-head {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--line);
+  gap: 8px;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
 }
-.section-head h2 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
+@media (max-width: 640px) {
+  .hero { padding: 64px var(--gutter) 72px; }
+}
+
+/* -------------------- Filter row -------------------- */
+.filter-row {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--gutter) 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.filter-btn {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 11px;
+  background: none;
+  border: 1px solid var(--line-strong);
+  color: var(--ink-soft);
+  padding: 0.5em 0.9em;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.filter-btn:hover { border-color: var(--accent); color: var(--ink); }
+.filter-btn.active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
 }
 
 /* -------------------- Numbered discipline sections -------------------- */
+.work { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter) 8px; }
 .work-section {
-  padding-top: 3.5rem;
-  scroll-margin-top: 90px;
+  padding-top: 0;
+  scroll-margin-top: 80px;
 }
-.work-section:first-of-type { padding-top: 0; }
+.work-section + .work-section { margin-top: 0; }
 .section-label {
   display: flex;
   align-items: baseline;
-  gap: 0.9rem;
-  margin-bottom: 2rem;
-  padding-bottom: 0.9rem;
-  border-bottom: 1px solid var(--line);
+  gap: 12px;
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line-2);
 }
 .section-label .num {
   font-family: var(--font-mono);
-  font-size: 0.82rem;
+  font-size: 12px;
   letter-spacing: 0.05em;
   color: var(--accent);
 }
@@ -304,72 +337,51 @@ section { padding: 4.5rem 0; }
 /* -------------------- Project grid / cards -------------------- */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem 1.75rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 56px;
+}
+@media (max-width: 900px) {
+  .project-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .project-grid { grid-template-columns: 1fr; }
 }
 .project-card {
   display: block;
-  border: 1px solid var(--line);
-  background: var(--bg);
-  transition: border-color 0.15s ease, transform 0.15s ease;
-}
-.project-card:hover,
-.project-card:focus-visible {
-  border-color: var(--ink);
-  transform: translateY(-2px);
 }
 .media-placeholder {
   aspect-ratio: 4 / 3;
-  background-color: var(--bg-panel);
-  background-image: repeating-linear-gradient(45deg, var(--line) 0, var(--line) 1px, transparent 1px, transparent 11px);
+  background-image: repeating-linear-gradient(45deg, var(--stripe-a) 0 12px, var(--stripe-b) 12px 24px);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid var(--line);
-  position: relative;
 }
 .media-placeholder span {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
+  font-size: 11px;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--ink-faint);
-  background: var(--bg);
-  padding: 0.3em 0.6em;
-  border: 1px solid var(--line);
-}
-.project-card .titleblock {
-  padding: 1.1rem 1.2rem 1.2rem;
+  color: var(--ink-soft);
 }
 .project-card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  margin-top: 12px;
+  color: var(--ink);
+  transition: color 0.15s ease;
+}
+.project-card:hover h3,
+.project-card:focus-visible h3 {
+  color: var(--accent);
 }
 .titleblock-meta {
-  display: flex;
-  justify-content: space-between;
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
-  color: var(--ink-soft);
-  text-transform: uppercase;
-  padding-top: 0.7rem;
-  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--ink-faint);
+  margin-top: 2px;
 }
-.titleblock-meta .cat { color: var(--accent); }
-.project-card .view-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4em;
-  margin-top: 0.9rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--ink);
-}
-.project-card .view-link::after { content: "\2192"; transition: transform 0.15s ease; }
-.project-card:hover .view-link::after { transform: translateX(3px); }
 
 /* -------------------- About -------------------- */
 .about-grid {
@@ -408,7 +420,34 @@ section { padding: 4.5rem 0; }
   .about-portrait { max-width: 220px; }
 }
 
-/* -------------------- Footer / contact -------------------- */
+/* -------------------- Minimal footer (landing page) -------------------- */
+.site-footer-mini {
+  padding: 32px 0;
+  background: var(--bg-panel);
+  border-top: 1px solid var(--line);
+}
+.site-footer-mini-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-faint);
+}
+.site-footer-mini a.nav-cta {
+  color: var(--accent);
+}
+.site-footer-mini a.nav-cta:hover,
+.site-footer-mini a.nav-cta:focus-visible {
+  color: var(--accent-hover);
+}
+
+/* -------------------- Footer / contact (about, resume, project pages) -------------------- */
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 3.5rem 0 2.5rem;
